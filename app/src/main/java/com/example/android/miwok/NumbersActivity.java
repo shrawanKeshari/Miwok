@@ -44,11 +44,11 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("nine", "wo'e"));
         words.add(new Word("ten", "na'aacha"));
 
-        ArrayAdapter<Word> itemsAdapter =
-                new ArrayAdapter<Word>(this, R.layout.list_item, words);
+        WordAdapter adapter =
+                new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
 
     }
 }
